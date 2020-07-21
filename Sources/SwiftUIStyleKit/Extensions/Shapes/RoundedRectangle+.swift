@@ -11,5 +11,9 @@ extension RoundedRectangle {
     public init(cornerRadius: RoundedSize) {
         self.init(cornerRadius: cornerRadius.radius)
     }
+    
+    public init(cornerRadius: BaseRoundedSize) {
+        self.init(cornerRadius: cornerRadius.radius)
+    }
 }
 

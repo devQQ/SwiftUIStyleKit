@@ -11,5 +11,9 @@ extension VStack {
     public init(alignment: HorizontalAlignment = .center, spacing: Spacing, @ViewBuilder content: () -> Content) {
         self.init(alignment: alignment, spacing: spacing.value, content: content)
     }
+    
+    public init(alignment: HorizontalAlignment = .center, spacing: BaseSpacing, @ViewBuilder content: () -> Content) {
+        self.init(alignment: alignment, spacing: spacing.value, content: content)
+    }
 }
 
