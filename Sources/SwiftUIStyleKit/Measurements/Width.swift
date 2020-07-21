@@ -107,4 +107,8 @@ extension View {
     public func width(_ width: Width) -> some View {
         ModifiedContent(content: self, modifier: WidthModifier(width: width))
     }
+    
+    public func width(_ width: BaseWidth) -> some View {
+        ModifiedContent(content: self, modifier: WidthModifier(width: width))
+    }
 }

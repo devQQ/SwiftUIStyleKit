@@ -125,6 +125,10 @@ extension View {
     public func height(_ height: Height) -> some View {
         ModifiedContent(content: self, modifier: HeightModifier(height: height))
     }
+    
+    public func height(_ height: BaseHeight) -> some View {
+        ModifiedContent(content: self, modifier: HeightModifier(height: height))
+    }
 }
 
 

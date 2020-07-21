@@ -2,7 +2,7 @@
 //  List+HeaderFooter.swift
 //  
 //
-//  Created by Quang Trang on 7/21/20.
+//  Created by Q Trang on 7/21/20.
 //
 
 import SwiftUI
