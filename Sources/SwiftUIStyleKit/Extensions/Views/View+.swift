@@ -28,11 +28,11 @@ extension View {
         frame(width: width?.value, height: height?.value, alignment: alignment)
     }
     
-    @inlinable public func frame(width: BaseWidth? = nil, height: BaseWidth? = nil, alignment: Alignment = .center) -> some View {
+    @inlinable public func frame(width: BaseWidth? = nil, height: BaseHeight? = nil, alignment: Alignment = .center) -> some View {
         frame(width: width?.value, height: height?.value, alignment: alignment)
     }
     
-    @inlinable public func frame(minWidth: Width, maxWidth: Width, minHeight: Height = BaseHeight.h0, maxHeight: Height = BaseHeight.infinity) -> some View {
+    @inlinable public func frame(minWidth: Width, maxWidth: Width, minHeight: Height, maxHeight: Height) -> some View {
         frame(minWidth: minWidth.value, maxWidth: maxWidth.value, minHeight: minHeight.value, maxHeight: maxHeight.value)
     }
     
