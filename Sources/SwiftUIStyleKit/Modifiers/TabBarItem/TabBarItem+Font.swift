@@ -7,10 +7,10 @@
 
 import SwiftUI
 
-struct TabBarItemFontModifier: ViewModifier {
-    let font: UIFont
+public struct TabBarItemFontModifier: ViewModifier {
+    public let font: UIFont
     
-    func body(content: Content) -> some View {
+    public func body(content: Content) -> some View {
         content
             .onAppear {
                 UITabBarItem.appearance().setTitleTextAttributes([NSAttributedString.Key.font: self.font], for: .normal)
@@ -19,7 +19,7 @@ struct TabBarItemFontModifier: ViewModifier {
 }
 
 extension View {
-    func setTabBarItemFont(_ font: UIFont) -> some View {
+    public func setTabBarItemFont(_ font: UIFont) -> some View {
         ModifiedContent(content: self, modifier: TabBarItemFontModifier(font: font))
     }
 }
