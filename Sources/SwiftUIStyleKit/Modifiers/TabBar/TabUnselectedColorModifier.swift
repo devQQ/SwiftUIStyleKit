@@ -21,7 +21,7 @@ public struct TabUnselectedColorModifier: ViewModifier {
     }
 }
 
-extension TabView {
+extension View {
     public func unselectedColor(_ color: UIColor) -> some View {
         ModifiedContent(content: self, modifier: TabUnselectedColorModifier(color: color))
     }
