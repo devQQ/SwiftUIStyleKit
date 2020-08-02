@@ -27,6 +27,7 @@ public enum BaseWidth: Width {
     case w24
     case w32
     case w40
+    case w44
     case w48
     case w56
     case w64
@@ -70,6 +71,8 @@ public enum BaseWidth: Width {
             return 32
         case .w40:
             return 40
+        case .w44:
+            return 44
         case .w48:
             return 48
         case .w56:

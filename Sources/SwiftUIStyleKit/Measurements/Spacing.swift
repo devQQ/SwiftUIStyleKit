@@ -44,9 +44,12 @@ public enum BaseSpacing: Spacing {
     case sNeg12
     case sNeg16
     case sNeg32
+    case sNeg64
     
     public var value: CGFloat {
         switch self {
+        case .sNeg64:
+            return -64
         case .sNeg32:
             return -32
         case .sNeg16:
