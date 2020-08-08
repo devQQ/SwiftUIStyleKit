@@ -32,7 +32,7 @@ public struct RemoteImageModifier: ViewModifier {
     }
 }
 
-extension Image {
+extension View {
     public func fetchRemoteImage(url: String) -> some View {
         ModifiedContent(content: self, modifier: RemoteImageModifier(url: url))
     }
