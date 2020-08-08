@@ -10,8 +10,9 @@ import UIKit
 extension UIColor {
     public static var red100: UIColor {
         let light = UIColor(red: 255/255, green: 245/255, blue: 245/255, alpha: 1.0)
+        let dark = UIColor(red: 252/255, green: 129/255, blue: 129/255, alpha: 0.7)
         
-        return UIColor.dynamic(light: light, dark: light)
+        return UIColor.dynamic(light: light, dark: dark)
     }
     
     public static var red200: UIColor {
