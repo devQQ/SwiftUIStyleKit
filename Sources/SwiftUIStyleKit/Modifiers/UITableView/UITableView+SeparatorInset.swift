@@ -17,7 +17,7 @@ public struct UITableViewNoSeparatorInsetModifier: ViewModifier {
 }
 
 extension View {
-    public func removeSepartorInsets() -> some View {
+    public func removeSeparatorInsets() -> some View {
         ModifiedContent(content: self, modifier: UITableViewNoSeparatorInsetModifier())
     }
 }
