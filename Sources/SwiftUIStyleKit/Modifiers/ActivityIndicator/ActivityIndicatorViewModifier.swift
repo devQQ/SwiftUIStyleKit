@@ -22,16 +22,14 @@ public struct ActivityIndicatorViewModifier: ViewModifier {
     
     public func body(content: Content) -> some View {
         ZStack {
-            GeometryReader { reader in
-                content
-                
-                VStack {
-                    LoadingView(isAnimating: self.$isAnimating, text: self.text, size: self.size)
-                }
-                .frame(width: reader.frame(in: .global).width, height: reader.frame(in: .global).height)
-                .background(self.backgroundColor)
-                .opacity(self.isAnimating ? 1 : 0)
+            content
+            
+            VStack {
+                LoadingView(isAnimating: self.$isAnimating, text: self.text, size: self.size)
             }
+            .frame(width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height)
+            .background(self.backgroundColor)
+            .opacity(self.isAnimating ? 1 : 0)
         }
     }
 }
