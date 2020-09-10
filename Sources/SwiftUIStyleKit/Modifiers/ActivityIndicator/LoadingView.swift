@@ -10,18 +10,20 @@ import SwiftUI
 public struct LoadingView: View {
     @Binding public var isAnimating: Bool
     public let text: String
+    public let textColor: Color
     public var size: CGSize
     
-    public init(isAnimating: Binding<Bool>, text: String, size: CGSize = CGSize(width: BaseWidth.w32.value, height: BaseHeight.h32.value)) {
+    public init(isAnimating: Binding<Bool>, text: String, textColor: Color = Color.gray900, size: CGSize = CGSize(width: BaseWidth.w32.value, height: BaseHeight.h32.value)) {
         self._isAnimating = isAnimating
         self.text = text
+        self.textColor = textColor
         self.size = size
     }
     
     public var body: some View {
         VStack(alignment: .center, spacing: .s4) {
             Text(text)
-                .foregroundColor(Color.gray900)
+                .foregroundColor(textColor)
                 .font(.system(size: .bodyEmphasis, weight: .semibold))
             
             HStack {
