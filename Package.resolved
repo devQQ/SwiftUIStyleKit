@@ -3,11 +3,11 @@
     "pins": [
       {
         "package": "NVActivityIndicatorView",
-        "repositoryURL": "https://github.com/ninjaprox/NVActivityIndicatorView",
+        "repositoryURL": "https://github.com/devQQ/NVActivityIndicatorView",
         "state": {
           "branch": null,
-          "revision": "cb5ffd2b6ecfef2333e70400d612d71551608c2e",
-          "version": "5.0.1"
+          "revision": "3a1876bc3ef1856aeaded54cc87260d84b4234ca",
+          "version": "5.1.0"
         }
       },
       {
