@@ -21,7 +21,7 @@ public struct ListHeaderFooterTintColorModifier: ViewModifier {
     }
 }
 
-extension List {
+extension View {
     public func headerFooterTintColor(color: UIColor) -> some View {
         ModifiedContent(content: self, modifier: ListHeaderFooterTintColorModifier(color: color))
     }
