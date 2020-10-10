@@ -21,15 +21,16 @@ public struct ActivityIndicatorViewModifier: ViewModifier {
     }
     
     public func body(content: Content) -> some View {
-        ZStack {
-            content
-            
-            VStack {
+        if self.isAnimating {
+            return VStack {
                 LoadingView(isAnimating: self.$isAnimating, text: self.text, size: self.size)
             }
             .frame(width: UIScreen.main.bounds.size.width, height: UIScreen.main.bounds.size.height)
             .background(self.backgroundColor)
             .opacity(self.isAnimating ? 1 : 0)
+            .eraseToAnyView()
+        } else {
+            return content.eraseToAnyView()
         }
     }
 }
