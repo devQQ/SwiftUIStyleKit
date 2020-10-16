@@ -30,6 +30,7 @@ public struct IconImageModifier: ImageModifier {
         return content
             .resizable()
             .renderingMode(.template)
+            .scaledToFit()
             .frame(width: size.value, height: size.value)
     }
 }
