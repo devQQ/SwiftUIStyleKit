@@ -27,6 +27,7 @@ public enum BaseHeight: Height {
     case h44
     case h48
     case h52
+    case h60
     case h64
     case h72
     case h80
@@ -77,6 +78,8 @@ public enum BaseHeight: Height {
             return 48
         case .h52:
             return 52
+        case .h60:
+            return 60
         case .h64:
             return 64
         case .h72:
